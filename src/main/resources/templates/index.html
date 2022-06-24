@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta 
+    name="description" content="Portfolio for bruce lee"
+    />
+    <metha name="author" content="Ellie"/>
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <script 
+    src="https://kit.fontawesome.com/342b4a23fe.js" 
+    crossorigin="anonymous"
+    ></script>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" 
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css"/>
+    <script src="index.js" defer></script>
+    
+  
+  
+  </head>
+  <body>
+    
+    <!-- navbar  -->
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <i class="fa-solid fa-paw"></i>
+        <a href="#">개르만족</a>
+      </div>
+      <div class="navbar__menu">
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item active" data-link="#home">Home</li>
+          <li class="navbar__menu__item" data-link="#about">About</li>
+          <li class="navbar__menu__item" data-link="#skills">Skills</li>
+          <li class="navbar__menu__item" data-link="#work">Work</li>
+          <li class="navbar__menu__item" data-link="#testimonials">Testimonials</li>
+          <li class="navbar__menu__item" data-link="#contact">Contact</li>
+        </ul>
+      </div>
+      <!-- Toogle button -->
+      <button class="navbar__toggle-btn">
+        <i class="fas fa-bars"></i>
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item active" data-link="#home">Home</li>
+          <li class="navbar__menu__item" data-link="#about">About</li>
+          <li class="navbar__menu__item" data-link="#skills">Skills</li>
+          <li class="navbar__menu__item" data-link="#work">Work</li>
+          <li class="navbar__menu__item" data-link="#testimonials">Testimonials</li>
+          <li class="navbar__menu__item" data-link="#contact">Contact</li>
+        </ul>
+      </button>
+    </nav>
+    <!-- Home -->
+    <section id="home">
+      <div class="home__container">
+        <img 
+        src="imgs/logo.png" 
+        alt="Dog Feeding web" 
+        class="home__avatar"
+      />
+      <h1 class="home__title">Hello, <br>lets feed dog</h1>
+      <h2 class="home__description">No more fat and sick dogs</h2>
+      <button class="home__contact" data-link="#contact">Contact me</button>
+      </div>
+    </section>
+    <!-- about -->
+    <section id="about" class="section section__container" >
+      <h1>About us</h1>
+      <p>
+        We hope all of dogs happiness. So we try to make wep for dog which helps to care dogs
+      </p>
+      <div class="about__majors">
+        <div class="major">
+          <div class="major__icon">
+            <i class="fa-solid fa-dog-leashed"></i>
+          </div>
+          <h2 class="major__title">walk-away</h2>
+          <div class="major_description">Using gps for dogs</div>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fa-solid fa-dog-leashed"></i>
+          </div>
+          <div class="major__title">dog-feeding</div>
+          <div class="major_description">Feed for dogs</div>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fa-solid fa-dog-leashed"></i>
+          </div>
+          <div class="major__title">dog-toy</div>
+          <div class="major_description">Toys for dogs</div>
+        </div>
+      </div>
+      <div class="about__us">
+        <div class="job">
+          <img 
+          src="imgs/logo2.png" 
+          alt="our__logo" 
+          class="job__logo"
+          />
+          <div class="job__description">
+            <p class="job__name">samsung</p>
+            <p class="job__period">2020~2021</p>
+          </div>
+        </div>
+        <div class="job">
+          <img 
+          src="imgs/logo2.png" 
+          alt="our__logo" 
+          class="job__logo"
+          />
+          <div class="job__description">
+            <p class="job__name">samsung</p>
+            <p class="job__period">2020~2021</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skills -->
+    <section id="skills" class="section">
+      <h1>Skills</h1>
+      <h2>Sills&attributes</h2>
+      <p>
+        Enjoy vipp life with your dogs. So many rich people raise dog and their dogs are really happy.
+      </p>
+      <div class="skillset">
+        <div class="skillset__left">
+          <h3 class="skillset__title">Skills</h3>
+          <div class="skill">
+            <div class="skill__description">
+              <span>HTML</span>
+              <span>99%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 99%"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__description">
+              <span>CSS</span>
+              <span>79%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 79%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="skillset__right">
+          <div class="tools">
+            <h3 class="skillset__title">Tools</h3>
+            <ul class="tools__list">
+              <li><span>Visualcode</span></li>
+              <li><span>Atom</span></li>
+              <li><span>work</span></li>
+              <li><span>Visualstudio</span></li>
+              <li><span>countryside</span></li>
+            </ul>
+          </div>
+          <div class="etc">
+            <h3 class="skillset__title">Tools</h3>
+              <ul class="etc__list">
+                <li><span>Git</span></li>
+                <li><span>Scrum</span></li>
+                <li><span>test</span></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- work -->
+    <section id="work" class="section">
+      <!-- container 적용을 해야 사이즈가 무한하게 안변한다.  -->
+      <div class="section__container">
+        <h1>My work</h1>
+      <h3>Projects</h3>
+      <div class="work__categories">
+        <button class="category__btn selected" data-filter="*">All<span class="category__count">8</span></button>
+        <button class="category__btn" data-filter="front-end">Front-end<span class="category__count">3</span></button>
+        <button class="category__btn" data-filter="back-end">Back-end<span class="category__count">2</span></button>
+        <button class="category__btn" data-filter="mobile">DBM<span class="category__count">4</span></button>
+      </div>
+      <div class="work__projects">
+        <a href="#" class="project" target="blank" data-type="mobile">
+          <img class="project__img" src="imgs/dog-solid.png" alt="dog">
+          <div class="project__description">
+            <h3>Youtube Site</h3>
+            <span>clone coding</span>
+          </div>
+        </a>
+        <a href="#" class="project" target="blank" data-type="front-end">
+          <img class="project__img" src="imgs/dog-solid.png" alt="dog">
+          <div class="project__description">
+            <h3>Youtube Site</h3>
+            <span>clone coding</span>
+          </div>
+        </a>
+        <a href="#" class="project" target="blank" data-type="back-end">
+          <img class="project__img" src="imgs/dog-solid.png" alt="dog">
+          <div class="project__description">
+            <h3>Youtube Site</h3>
+            <span>clone coding</span>
+          </div>
+        </a>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- testmonials -->
+    <section id="testimonials" class="section">
+      <div class="section__container">
+        <h1>Testimonials</h1>
+      <h3>see what they say about me</h3>
+      <div class="testimonials">
+        <div class="testimonial">
+          <img 
+          src="imgs/favicon.png" 
+          alt="people" 
+          class="testimonial__avatar"
+          />
+          <div class="testimonial__speech-bubble">
+            <p>what he saidasefffffffffffwefwefaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa to me</p>
+            <p class="name"><a href="">Brucelee</a> / Samsung</p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial__speech-bubble">
+            <p>what he said to meadfffffffffffffffaweffffffffffffffffffffffffffffffffffffffffawefwef</p>
+            <p class="name"><a href="">Brucelee</a> / Samsung</p>
+          </div>
+          <img 
+          src="imgs/favicon.png" 
+          alt="people" 
+          class="testimonial__avatar"
+          />
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- contact -->
+    <section id="contact" class="section">
+      <h1 class="contact__title">Lets talk</h1>
+      <h2 class="contact__email">minheok2003@naver.com</h2>
+      <div class="contact__links">
+        <a href="github.com">
+          <i class="fa fa-linked-square"></i>
+        </a>
+      </div>
+      <p class="contact__rights">
+        2020 Dream coding its end
+      </p>
+    </section>
+
+    <!-- Arrow up -->
+    <button class="arrow__up">
+      <i class="fa-solid fa-arrow-up-long"></i>
+    </button>
+  </body>
+</html>

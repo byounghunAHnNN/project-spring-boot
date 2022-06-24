@@ -1,0 +1,108 @@
+
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  margin-top:10%;
+  background-color: #fe918d;
+  display:flex;
+  height:100vh;
+  justify-content: center;
+}
+
+ul{
+  list-style:none;
+  width:400px;
+}
+
+.header{
+  height:192px;
+}
+
+.return_logo{
+  text-align: center;
+}
+
+.container{
+  align-content: center;
+}
+
+
+.login_form {
+  background-color: #EEEFF1;
+  width: 458px;
+  height: 255px;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 20%; */
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.text_field {
+  display:flex;
+  font-size: 14px;
+  width: 400px;
+  height:40px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom:10px;
+}
+
+.submit_btn {
+  display:flex;
+  font-size: 14px;
+  background-color: #fe918d;
+  color: white;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  margin-bottom: 5px;
+  justify-content: center;
+}
+
+.remember_id_checkbox{
+  display:flex;
+}
+
+.remember_id{
+  display:flex;
+  align-items: center;
+}
+.remember_id_word{
+  font-size:12px;
+  margin-top:0px;
+}
+
+.keep_login_word{
+  font-size: 12px;
+  margin-top:0px;
+}
+
+.links {
+  display:flex;
+  align-content: center; 
+}
+
+
+
+.links a {
+  font-size: 12px;
+  color: #9b9b9b;
+  
+}
+
+.find_wrap{
+  padding-left:0px;
+  display:flex;
+  text-decoration: none;
+  justify-content: space-around;
+}
+
+/* .find_wrap li{
+  position: relative;
+  display:inline-block;
+} */

@@ -1,0 +1,140 @@
+/* 최상위부터 한다음에 밑에를 꾸며주는게 중요하다 */
+body{
+  margin:0; /*spacing이 나타나는걸 없애주기 위해서 이렇게 해준다*/
+  font-family: 'Source Sans pro';
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between; 
+  /* 박스를 양 끝에 맞춰주면서 간격을 일정하게 유지 */ 
+  /* align-items: center; 수직으로 맞춰준다.(위치를 같은 라인으로 오게끔) */
+  background-color:#fe918d;
+  /* padding: 8px 12px;  */
+  /* 너무 붙어있기 때문에 양쪽에 padding을 준다 */
+  height: 202px;
+}
+
+.navbar_main{
+  text-align: center;
+}
+
+.logo_to_home{
+  margin-top:5px;
+  width:265px;
+  height: 155px;
+}
+
+.navbar_logo{
+  width:200px;
+  color: white;
+}
+
+.navbar_logo img {
+  width:100px;
+  height: 100px;
+  color: #d49466;
+}
+
+.navbar_menu{
+  display: flex;
+  justify-content: center;
+  list-style: none; /* '을 지워주려면 none 사용*/
+  padding-left: 0; /*하면 왼쪽에 붙여준다(정 중앙으로 맞춰주는것)*/
+  margin:0;
+}
+
+.navbar_menu li{
+  padding: 8px 12px; 
+  /*list 값들에 padding을 넣어주기 전에는 다 붙어있다. 
+  마우스를 올렸을때 해당되는 범위를 크게 해주기 위해
+  margin을 넣으면 클릭할 수 있는 범위가 작아진다(불편)*/
+  margin:0px;
+}
+
+.navbar_menu li:hover{
+  background-color: #ff6863;
+  border-radius: 4px; /*너무 직각 네모기 때문에 끝에를 둥글게 표시해준다*/
+}
+.sns_login{
+  border-radius: 5px;
+  margin-top: 128px;
+}
+
+.navbar_login{
+  display: flex;
+  float:bottom;
+  padding:0px;
+  margin:0px;
+  list-style: none;
+  justify-content: right;
+}
+.navbar_login li{
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.navbar_login li:hover{
+  background-color: #ff6863;
+}
+.navbar_sns{
+  list-style: none;
+  color: white;
+  display:flex;
+  justify-content: center;
+  padding:0px;
+  margin:0px;
+}
+
+.navbar_sns li{
+  padding: 8px 12px;
+}
+
+.navbar_toogleBtn{
+  display: none;
+  position:absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #d49466;
+}
+
+/*레이아웃을 반응형으로 만드는 법*/
+/*max-width / minwidth 한번 더 공부하기 */
+@media screen and (max-width: 768px) {
+  .navbar{
+    flex-direction: column; /*row -> column*/
+    align-items: flex-start; /*중심축이 수직이니까 반대축인 수평에서 왼쪽으로 놓아야 한다*/
+    padding: 8px 24px; /*너무 화면에 꽉차니까 공간을 부여한다*/ 
+  }
+  .navbar_menu{
+    display:none;
+    flex-direction: column;
+    align-items: center; /* 아이콘은 중앙에 배치하고 싶기 떄문에*/
+    /*그냥 여기까지 해주면 움직이는게 없다. 왜냐하면 메뉴 박스가 작기 때문이다*/
+    width:100%; /*중간으로 올 수 있게 메뉴를 넓게 해준다.*/
+  }
+  .navbar_menu li{
+    width: 100%; /*hover이 전체로 적용시키기 위해.. 근데 이렇게 하면 너비가 넓어져서
+    다시 왼쪽으로 정렬된다.*/
+    text-align: center; /* 다시 왼쪽으로 가니까 중앙으로..*/
+  }
+
+  .navbar_sns {
+    display:none;
+    justify-content: center;
+    width: 100%;
+    padding-left:0; /*왼쪽에 남는 공간을 없애주기 위해*/
+    
+  }
+  .navbar_toogleBtn{
+    display:block;
+  }
+  .navbar_menu.active,
+  .navbar_sns.active{
+    display:flex;
+  }
+
+}

@@ -1,0 +1,575 @@
+/* Global */
+
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Annimation  */
+  --animation-duration:300ms;
+
+}
+
+
+/* Universal tags */
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  cursor: default;
+}
+
+a{
+  text-decoration: none;
+  color: var(--color-white);
+}
+ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+button{
+  background-color: transparent;
+  cursor: pointer; 
+  /* 가져다 댔을때 손바닥 모양이 나온다. */
+  border: none;
+  outline: none;
+}
+/* Typography */
+
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0;
+}
+
+/* Navbar  */
+#navbar {
+  position: fixed; 
+  /* 항상 젤 위에 고정되어있기 때문에 fixed.
+  하면 너비가 작게 변한다.(부모 위로 나왔기 때문)
+  얘네 컨텐츠 만큼 너비가 자동으로 책정됨.
+  */
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  align-items: center;
+  color: var(--color-white);
+  padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+  /* navbar은 무슨일이 있어도 제일 위에 있어야 하니까 */
+  z-index:1;
+}
+
+#navbar.navbar--dark{
+  background-color: var(--color-pink);
+  padding: 8px; 
+  /* padding이 너무 많으니깐.. */
+}
+
+.navbar__logo{
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+.navbar__menu {
+  display: flex;
+}
+
+.navbar__menu__item{
+  padding: 8px 12px;
+  margin: 0 4px;
+  color: var(--color-white);
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item:hover{
+  border-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.navbar__toggle-btn{
+  position:absolute;
+  top:24px;
+  right:32px;
+  font-size:24px;
+  color: var(--color-white);
+  display:none; 
+  /* 투명도만 조정하면 마우스 올라갈떄 클릭이 되어서 하면 안된다.  */
+}
+
+/* Home */
+#home{
+  background: url("imgs/Background.jpg") center/cover no-repeat;
+  padding: 40px;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.home__avatar{
+  width: 250px;
+  height: 250px;
+  border-radius:50%;
+  border: 2px solid var(--color-light-white);
+  background-color: var(--color-white);
+}
+
+.home__contact{
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+/* Section common */
+.section{
+  padding: 50px;
+  text-align: center;
+  margin:auto; /*우측에만 margin이 생겨 
+  text-align:center을 해도 작동되지 않는다 */
+}
+
+.section__container{
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About */
+.about__majors{
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.major__icon{
+  width:170px;
+  height: 170px;
+  line-height: 170px; /*lineheight 을 높이만큼 해주면 
+  자동으로 중간에 오게 된다. */
+  font-size: 70px;
+  background-color: yellow; /*만들면서 위치를 확인하기 어렵기 
+  때문에 임의로 색깔을 대입해서 움직이는걸 봐야 한다*/
+  margin: auto; /*margin이 왼/오 골고루 들어간다*/
+  color: blue;
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.major__icon i{
+  transition: all var(--animation-duration);
+}
+
+.major__icon:hover i{
+  color: var(--color-pink);
+  transform: rotate(-30deg) scale(1.1);
+}
+
+.major__title, .major__description{
+  color:var(--color-dark-grey);
+}
+
+.major__description{
+  font-size:var(--font-small);
+}
+
+.job img{
+  width: 100px;
+  height: 100px;
+} 
+
+.job{
+  display: flex; /*job 을 한줄에 하나다. 몰아넣기*/
+  width: 100%;
+  justify-content: flex-start;
+}
+
+
+.job__description{
+  margin: 0 16px;
+  text-align: left;
+}
+
+.job__name,
+.job__period{
+  color: var(--color-light-grey);
+}
+
+.job__name{
+  font-size: var(--font-small);
+}
+
+.job__period{
+  font-size: var(--font-micro);
+  text-align: center;
+}
+
+/* Skill */
+#skills{
+  background-color: var(--color-yellow);
+}
+
+.skillset{
+  display: flex;
+  background-color: var(--color-light-grey);
+  color: var(--color-light-white);
+  margin: 20px 0;
+}
+
+.skillset__title{
+  color: var(--color-white);
+}
+
+.skillset__left{
+  flex-basis:60%;
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+
+.skill{
+  margin-bottom:32px;
+}
+
+.skill__description{
+  display: flex;
+  justify-content: space-between;
+}
+
+.skillset__right{
+  flex-basis: 40%;
+}
+
+.skill__bar{
+  width:100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+
+.skill__value{
+  width:100%;
+  height: 3px;
+  background-color: var(--color-orange);
+}
+
+.tools{
+  background-color: var(--color-grey);
+}
+
+.tools, .etc{
+  padding: 20px;
+}
+
+/* work */
+.work_categories{
+  margin: 40px;
+}
+.category__btn{
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+}
+
+
+
+.category__btn.selected,
+.category__btn:hover{
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+
+.category__btn.selected .category__count,
+.category__btn:hover .category__count{
+  opacity: 1;
+  top:0;
+}
+
+.category__count{
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: --color-white;
+  width:24px;
+  height: 24px;
+  line-height: 24px; /*line-height을 height과 같게 해주면 중앙정렬 된다. */
+  display: inline-block; /*동그라미가 이쁘지 않은 이유
+  span은 context를 꽉 감싸주는 사이즈로 정해주기 떄문에 inline-block으로 해준다*/
+  position: relative;
+  top: -20px;
+  left: 4px; 
+  opacity: 0; /*평소에는 보이지 않게 해둔다*/
+  transition: all var(--animation-duration) ease-in; 
+}
+
+.work__projects{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity:1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.anim_out{
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
+}
+
+.project{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; /*수직으로 정렬하기 위해*/
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  background-color: var(--color-light-white);
+}
+
+.project.invisible{
+  display:none;
+}
+
+.project__img{
+  max-width: 100%;
+  max-height: 100%;
+  /*자기가 담겨있는 사이즈안에서만 움직여야 한다*/
+}
+
+.project__description{
+  position: absolute; 
+  /* 근접한 부모노드중에 기본값인 position:static을 쓰지 않는 부모를 찾아가게 된다 
+  project에서 relative를 사용했기 때문에 project 기준으로 움직이게 된다.*/
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:100%;
+  height:100%;  
+  /* 아이템 공간을 전부 다 차지하고 싶으니깐 100%로 */
+  top: 0;
+  left: 0;
+  opacity: 0; /*마우스가 올라갔을때만 봐야하기 때문에*/
+  transform: translateY(10px);
+  transition: all var(--animation-duration) ease-in;
+}
+
+.project:hover .project__description{
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+
+.project__description h3{
+  color: var(--color-orange);
+}
+
+.project__description h3:after{
+  content: '';
+  display:block; /*한줄에 하나씩 들어갈 수 있게 하기 위해*/
+  position:realative;
+  left:50%;
+  width: 50px;
+  height: 2px;
+  margin-left:-12px;
+  margin-top: 8px; 
+  background-color: var(--color-dark-white);
+}
+
+/* Testimonial */
+
+#testimonials{
+  background-color: var(--color-light-white);
+}
+
+.testimonials {
+  margin: 40px;
+
+}
+
+.testimonial{
+  display: flex;
+  margin: 32px 0;
+}
+
+.testimonial__avatar{
+  width:150px;
+  height:150px;
+  border-radius: 50%;
+}
+
+.testimonial__avatar:nth-child(odd){
+  margin-right: 40px;
+}
+
+.testimonial__avatar:nth-child(even){
+  margin-left: 40px;
+}
+
+.testimonial__speech-bubble{
+  padding: 18px;
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.testimonial__speech-bubble p{
+  color: var(--color-light-grey);
+}
+
+.testimonial__speech-bubble a{
+  color: var(--color-pink);
+}
+
+/* Contact */
+#contact{
+  background-color: var(--color-pink);
+}
+
+.contact__title,
+.contact__email,
+.contact_rights{
+  color:var(--color-white);
+}
+
+.contact__title{
+  margin:32px 0;
+}
+
+.contact__links{
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+
+/* 마우스 올리면 커지게 */
+
+.contact__links i{
+  transition: all var(--animation-duration) ease-in;
+}
+.contact__links i:hover{
+  transform: scale(1.1);
+  color: var(--color-yellow);
+}
+
+/* Scroll up to home*/
+.arrow__up{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width:70px;
+  height:70px;
+  font-size:50px;
+  color: var(--color-white);
+  background-color: var(--color-pink);
+  border-radius: 50%;
+  opacity:0;
+  pointer-events: none; 
+  /* 안보일땐 클릭이 안되도록 */
+  transition : all 300ms ease-in;
+}
+
+.arrow__up.visible{
+  opacity:1;
+  pointer-events: auto; 
+  /* mdn pointer event 검색 */
+}
+
+/* For below 768px screen width */ 
+@media screen  and (max-width: 768px) {
+  .navbar__toggle-btn{
+    display:block; /*block으로 보여준다*/
+  }
+
+  #navbar{
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--color-pink);
+  }
+
+  #navbar.navbar--dark{
+    padding: 16px;
+  }
+
+  .navbar__menu{
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display:none;
+  }
+
+  .navbar__menu.open{
+    display: block;
+  }
+
+  .about__majors{
+    flex-direction: column;
+  }
+
+  .major{
+    margin-bottom:38px;
+  }
+
+  .skillset{
+    flex-direction: column;
+  }
+
+  .project{
+    flex-grow:1;
+    /*화면을 알아서 메꿔주게끔*/
+  }
+
+  .testimonial__avatar{
+    width: 80px;
+    height: 80px;
+  }
+}
